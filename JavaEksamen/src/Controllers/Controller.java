@@ -1,7 +1,7 @@
 package Controllers;
-
 import MenuView.MainMenu;
 import MenuView.UserMenu;
+import MenuView.BookMenu;
 
 /**
  * Created by EmilEhrenreich on 22/11/2016.
@@ -15,8 +15,8 @@ public class Controller {
 
     public Controller(){
         this.mainMenu = new MainMenu(this);
-        this.bookMenu = new BookMenu(this);
-        this.userMenu = new UserMenu(this);
+     //   this.bookMenu = new BookMenu(this);
+      //  this.userMenu = new UserMenu(this);
     }
 
 
