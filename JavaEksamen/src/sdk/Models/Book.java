@@ -1,4 +1,4 @@
-package Models;
+package sdk.Models;
 
 import java.util.ArrayList;
 
@@ -13,18 +13,18 @@ public class Book {
     private String ISBN;
     private int priceAB;
     private int priceSaxo;
-    private int price CDON;
+    private int priceCDON;
     private String Publisher;
     private ArrayList<Author> authors;
 
-    public Book(String bookID, String title, String version, String ISBN, int priceAB, int priceSaxo, int price, String publisher, ArrayList<Author> authors) {
+    public Book(String bookID, String title, String version, String ISBN, int priceAB, int priceSaxo, int priceCDON, String publisher, ArrayList<Author> authors) {
         this.bookID = bookID;
         this.title = title;
         this.version = version;
         this.ISBN = ISBN;
         this.priceAB = priceAB;
         this.priceSaxo = priceSaxo;
-        this.price = price;
+        this.priceCDON = priceCDON;
         Publisher = publisher;
         this.authors = authors;
     }
@@ -77,12 +77,12 @@ public class Book {
         this.priceSaxo = priceSaxo;
     }
 
-    public int getPrice() {
-        return price;
+    public int getPriceCDON() {
+        return priceCDON;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setPriceCDON(int priceCDON) {
+        this.priceCDON = priceCDON;
     }
 
     public String getPublisher() {

@@ -1,16 +1,13 @@
-package sdk.connection.service;
+package sdk.service;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import sdk.connection.Connection;
-import sdk.connection.ResponseCallback;
-import sdk.connection.ResponseParser;
-import sdk.models.Book;
+import sdk.Connection.Connection;
+import sdk.Connection.ResponseCallback;
+import sdk.Connection.ResponseParser;
+import sdk.Models.Book;
 
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 public class BookService {
@@ -25,7 +22,6 @@ public class BookService {
 
     public void getAll(final ResponseCallback<ArrayList<Book>> responseCallback) {
         HttpGet getRequest = new HttpGet(Connection.serverURL + "/books");
-        getRequest.addHeader("filter", "{\"include\":[\"authors\",\"publisher\"]}");
 
         this.connection.execute(getRequest, new ResponseParser() {
             public void payload(String json) {
@@ -38,3 +34,5 @@ public class BookService {
                 responseCallback.error(status);
             }
         });
+    }
+}
