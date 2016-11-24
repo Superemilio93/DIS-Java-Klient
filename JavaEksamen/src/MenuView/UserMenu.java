@@ -8,10 +8,18 @@ public class UserMenu {
 
     public void PresentMenu() {
 
-        System.out.println("------Bruger-Menu-----");
+        System.out.println("-----Bruger-Menu----");
         System.out.println("Vælg en af nedenstående muligheder");
         System.out.println("(1) Login");
 
 
     }
+
+
+
+
+
+
+
+
 }

@@ -1,4 +1,5 @@
 package MenuView;
+import Controllers.Controller;
 import java.util.Scanner;
 
 
@@ -7,20 +8,19 @@ import java.util.Scanner;
  */
 public class MainMenu {
 
-    public static void main (String [] args) {
-
-       // private Controller controller;
 
 
-    public MainMenu(Controller controller) {
+    private Controller controller;
+
+    public MainMenu(Controller controller){
             this.controller = controller;
-        }
+    }
 
 
     public void presentMenu() {
 
         System.out.println("Velkommen til BookIT");
-        System.out.println("------Hovedmenu-----");
+        System.out.println("-----Hovedmenu----");
         System.out.println("Vælg en af nedenstående muligheder");
         System.out.println("(1) Gå til bog-menu");
         System.out.println("(2) Gå til bruger-menu");
@@ -36,18 +36,17 @@ public class MainMenu {
                 break;
 
             case 2:
+                this.controller.getUserMenu().PresentMenu();
+                break;
 
+            default:
+                System.out.println("Forkert valg - Prøv igen");
+                presentMenu();
+                break;
 
         }
 
-
     }
-}
-
-
     }
 
 
-
-
-}
